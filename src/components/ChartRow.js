@@ -139,7 +139,7 @@ export default class ChartRow extends React.Component {
         if (this.mounted) this.setState({ yAxisScalerMap: scalerMap });
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         // Our chart scales are driven off a mapping between id of the axis
         // and the scale that axis represents. Depending on the transition time,
         // this scale will animate over time. The controller of this animation is
@@ -153,7 +153,7 @@ export default class ChartRow extends React.Component {
      * When we get changes to the row's props we update our map of
      * axis scales.
      */
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.updateScales(nextProps);
     }
     componentWillUnmount() {

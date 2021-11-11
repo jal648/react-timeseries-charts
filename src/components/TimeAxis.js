@@ -55,7 +55,7 @@ export default class TimeAxis extends React.Component {
         this.renderTimeAxis(scale, format, showGrid, gridHeight);
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         const { scale, utc, format, showGrid, gridHeight } = nextProps;
         if (
             scaleAsString(this.props.scale) !== scaleAsString(scale) ||

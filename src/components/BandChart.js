@@ -206,7 +206,7 @@ export default class BandChart extends React.Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         const aggregation = nextProps.aggregation;
 
         let aggregationChanged = false;
@@ -544,9 +544,9 @@ BandChart.propTypes = {
     /**
      * The column within the TimeSeries to plot. Unlike other charts, the BandChart
      * works on just a single column.
-     * 
-     * NOTE : Columns can't have periods because periods 
-     * represent a path to deep data in the underlying events 
+     *
+     * NOTE : Columns can't have periods because periods
+     * represent a path to deep data in the underlying events
      * (i.e. reference into nested data structures)
      */
     column: PropTypes.string,

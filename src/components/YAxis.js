@@ -120,7 +120,7 @@ export default class YAxis extends React.Component {
         );
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         const {
             scale,
             align,

@@ -213,7 +213,7 @@ export default class BoxChart extends React.Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         const aggregation = nextProps.aggregation;
 
         let aggregationChanged = false;
